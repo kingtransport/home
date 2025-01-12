@@ -1,0 +1,246 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Transport Booking System
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+     font-family: 'Product Sans', sans-serif;
+   }
+   .transition-long {
+     transition: all 0.5s ease-in-out;
+   }
+   .glow-on-click:active {
+     box-shadow: 0 0 10px 2px rgba(0, 123, 255, 0.8);
+   }
+  </style>
+ </head>
+ <body class="bg-gray-900 text-white">
+  <!-- Navigation Bar -->
+  <nav class="bg-gray-800 shadow-md fixed w-full z-10">
+   <div class="container mx-auto px-4 py-2 flex justify-center items-center">
+    <a href="#">
+     <img alt="Company logo" class="h-10 w-80" src="king-logo.png"/>
+    </a>
+   </div>
+  </nav>
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 py-16 flex flex-col lg:flex-row">
+   <!-- Interactive Map -->
+   <div class="w-full lg:w-2/3 mb-8 lg:mb-0">
+    <img alt="Earth Image" class="w-full h-full object-cover rounded-lg shadow-md transition-long transform hover:scale-105" src="earth.png"/>
+   </div>
+   <!-- Booking Panel -->
+   <div class="w-full lg:w-1/3 bg-gray-800 p-6 rounded-lg shadow-md transition-long transform hover:scale-105">
+    <h2 class="text-2xl font-bold mb-4">
+     Book Your Trip
+    </h2>
+    <form>
+     <div class="mb-4">
+      <label class="block text-gray-300" for="transport-mode">
+       Select Transport Mode
+      </label>
+      <select class="w-full mt-2 p-2 border rounded-lg bg-gray-700 text-white" id="transport-mode">
+       <option>
+        Taxi
+       </option>
+       <option>
+        Bus
+       </option>
+       <option>
+        Train
+       </option>
+       <option>
+        Other
+       </option>
+      </select>
+     </div>
+     <div class="mb-4">
+      <label class="block text-gray-300" for="start-location">
+       Starting Location
+      </label>
+      <input class="w-full mt-2 p-2 border rounded-lg bg-gray-700 text-white" id="start-location" placeholder="Enter starting location" type="text"/>
+     </div>
+     <div class="mb-4">
+      <label class="block text-gray-300" for="destination">
+       Destination
+      </label>
+      <input class="w-full mt-2 p-2 border rounded-lg bg-gray-700 text-white" id="destination" placeholder="Enter destination" type="text"/>
+     </div>
+     <div class="mb-4">
+      <label class="block text-gray-300" for="date">
+       Date
+      </label>
+      <input class="w-full mt-2 p-2 border rounded-lg bg-gray-700 text-white" id="date" type="date"/>
+     </div>
+     <div class="mb-4">
+      <label class="block text-gray-300" for="time">
+       Time
+      </label>
+      <input class="w-full mt-2 p-2 border rounded-lg bg-gray-700 text-white" id="time" type="time"/>
+     </div>
+     <div class="mb-4">
+      <label class="block text-gray-300" for="seat-selection">
+       Seat Selection
+      </label>
+      <select class="w-full mt-2 p-2 border rounded-lg bg-gray-700 text-white" id="seat-selection">
+       <option>
+        Any
+       </option>
+       <option>
+        Window
+       </option>
+       <option>
+        Aisle
+       </option>
+      </select>
+     </div>
+     <div class="mb-4">
+      <label class="block text-gray-300" for="payment">
+       Payment Options
+      </label>
+      <select class="w-full mt-2 p-2 border rounded-lg bg-gray-700 text-white" id="payment">
+       <option>
+        Credit Card
+       </option>
+       <option>
+        PayPal
+       </option>
+       <option>
+        Cash
+       </option>
+      </select>
+     </div>
+     <div class="flex justify-center">
+      <button class="bg-blue-600 text-white py-2 px-8 rounded-full transition-long transform hover:scale-105 glow-on-click" type="submit">
+       Book Now
+      </button>
+     </div>
+    </form>
+   </div>
+  </div>
+  <!-- Journey Planner -->
+  <div class="container mx-auto px-4 py-4">
+   <h2 class="text-2xl font-bold mb-4">
+    Journey Planner
+   </h2>
+   <div class="bg-gray-800 p-6 rounded-lg shadow-md transition-long transform hover:scale-105">
+    <div class="mb-4">
+     <label class="block text-gray-300" for="journey-start">
+      Starting Location
+     </label>
+     <input class="w-full mt-2 p-2 border rounded-lg bg-gray-700 text-white" id="journey-start" placeholder="Enter starting location" type="text"/>
+    </div>
+    <div class="mb-4">
+     <label class="block text-gray-300" for="journey-destination">
+      Destination
+     </label>
+     <input class="w-full mt-2 p-2 border rounded-lg bg-gray-700 text-white" id="journey-destination" placeholder="Enter destination" type="text"/>
+    </div>
+    <div class="flex justify-center">
+     <button class="bg-blue-600 text-white py-2 px-8 rounded-full transition-long transform hover:scale-105 glow-on-click" type="submit">
+      Plan Journey
+     </button>
+    </div>
+   </div>
+  </div>
+  <!-- Customer Support and FAQs -->
+  <div class="container mx-auto px-4 py-8">
+   <h2 class="text-2xl font-bold mb-4">
+    Customer Support and FAQs
+   </h2>
+   <div class="bg-gray-800 p-6 rounded-lg shadow-md transition-long transform hover:scale-105">
+    <div class="mb-4">
+     <h3 class="text-xl font-semibold">
+      Live Chat
+     </h3>
+     <p class="text-gray-300">
+      Chat with our support agents in real time.
+     </p>
+     <div class="flex justify-center">
+      <button class="mt-2 bg-blue-600 text-white py-2 px-8 rounded-full transition-long transform hover:scale-105 glow-on-click">
+       Start Chat
+      </button>
+     </div>
+    </div>
+    <div class="mb-4">
+     <h3 class="text-xl font-semibold">
+      FAQs
+     </h3>
+     <p class="text-gray-300">
+      Find answers to common questions.
+     </p>
+     <div class="flex justify-center">
+      <button class="mt-2 bg-blue-600 text-white py-2 px-8 rounded-full transition-long transform hover:scale-105 glow-on-click">
+       View FAQs
+      </button>
+     </div>
+    </div>
+    <div class="mb-4">
+     <h3 class="text-xl font-semibold">
+      Help Articles
+     </h3>
+     <p class="text-gray-300">
+      Read detailed guides and troubleshooting tips.
+     </p>
+     <div class="flex justify-center">
+      <button class="mt-2 bg-blue-600 text-white py-2 px-8 rounded-full transition-long transform hover:scale-105 glow-on-click">
+       View Articles
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6 mt-8">
+   <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+    <div class="mb-4 md:mb-0">
+     <a href="#">
+      <img alt="Company logo" width="374" height="100" src="footer-logo.png"/>
+     </a>
+    </div>
+    <div class="flex space-x-6 mb-4 md:mb-0">
+     <a class="text-gray-300 hover:text-blue-400 transition-long" href="#">
+      Terms &amp; Conditions
+     </a>
+     <a class="text-gray-300 hover:text-blue-400 transition-long" href="#">
+      Privacy Policy
+     </a>
+     <a class="text-gray-300 hover:text-blue-400 transition-long" href="#">
+      About Us
+     </a>
+    </div>
+    <div class="flex space-x-4">
+     <a class="text-gray-300 hover:text-blue-400 transition-long" href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a class="text-gray-300 hover:text-blue-400 transition-long" href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a class="text-gray-300 hover:text-blue-400 transition-long" href="#">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+    </div>
+   </div>
+   <div class="container mx-auto px-4 mt-4">
+    <form class="flex flex-col md:flex-row items-center">
+     <input class="w-full md:w-auto flex-1 p-2 border rounded-lg mb-4 md:mb-0 md:mr-4 bg-gray-700 text-white" placeholder="Enter your email" type="email"/>
+     <div class="flex justify-center w-full md:w-auto">
+      <button class="bg-blue-600 text-white py-2 px-8 rounded-full transition-long transform hover:scale-105 glow-on-click" type="submit">
+       Subscribe
+      </button>
+     </div>
+    </form>
+   </div>
+  </footer>
+ </body>
+</html>
